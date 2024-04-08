@@ -1,5 +1,3 @@
 # Database 
 query.sql 
 schema.sql
-
-sqlc.yaml
