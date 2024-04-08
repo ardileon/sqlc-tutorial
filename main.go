@@ -1,9 +1,11 @@
 package main
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
 	"log"
+	"sqlctutorial/product"
 
 	_ "github.com/lib/pq"
 )
@@ -22,5 +24,11 @@ func main() {
 	}
 
 	defer db.Close()
+
+	// made get access to queries
+	ctx := context.Background()
+	queries := product.New(db) // untuk mendapatkan acces ke product -> db
+
+	// get all products
 
 }

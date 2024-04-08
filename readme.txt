@@ -68,6 +68,9 @@ INSERT INTO product (name, price, available) VALUES ('BOOK', 10.99, true); // un
 
 	defer db.Close()
 
+19. // made get access to queries
+	ctx := context.Background()
+	queries := product.New(db) // untuk mendapatkan acces ke product -> db
 
 sumber : https://www.youtube.com/watch?v=x_N2VjGQKr4 || https://docs.sqlc.dev/en/stable/howto/select.html || https://github.com/lib/pq
     
