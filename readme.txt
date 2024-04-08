@@ -45,3 +45,21 @@ go get github.com/jackc/pgx/v5 untuk yang pakai sql_package : "pgx/v5" di yaml f
 14. Masukkin data ke table: INSERT INTO namatabelnya (nama atrribut) VALUES (nilai yang akan kita input ke attribut); contoh:
 INSERT INTO product (name, price, available) VALUES ('BOOK', 10.99, true); // untuk input value type string pakai ' value stringnya ' kalau berhasil nanti ada INSERT 0 1
 15. Kita bisa verfikasi value yang kita masukin ke table tadi dengan : SELECT * FROM namatablenya;
+16. buat koneksi dari main.go ke postgresql
+17. tuliskan di main.go nya 
+
+    import _ "github.com/lib/pq" // 
+
+    // buat koneksi ke postgresql dengan sqlc
+	connStr := "postgresql://postgresql:12345@localhost:5432/sqlctest?sslmode=disable" // jadi instance variable untuk connection ke db psql"
+	// postgresql://username db postgresql : password db postresql @localhost:5432 itu entry point dari db psqlnya  /sqlctest adalah nama dari databasenya
+	// sslmode=disable berati nggak ada enkripsi antara aplikasi dan databasenya
+	db, err := sql.Open("postgres", connStr)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer db.Close()
+
+    
