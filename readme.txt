@@ -50,8 +50,9 @@ go get github.com/jackc/pgx/v5 untuk yang pakai sql_package : "pgx/v5" di yaml f
 14. Masukkin data ke table: INSERT INTO namatabelnya (nama atrribut) VALUES (nilai yang akan kita input ke attribut); contoh:
 INSERT INTO product (name, price, available) VALUES ('BOOK', 10.99, true); // untuk input value type string pakai ' value stringnya ' kalau berhasil nanti ada INSERT 0 1
 15. Kita bisa verfikasi value yang kita masukin ke table tadi dengan : SELECT * FROM namatablenya;
-16. buat koneksi dari main.go ke postgresql
-17. tuliskan di main.go nya 
+16. Untuk keluar dari terminal psql bisa di ketik : \q
+17. buat koneksi dari main.go ke postgresql
+18. tuliskan di main.go nya 
 
     import _ "github.com/lib/pq" // 
 
