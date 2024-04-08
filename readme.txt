@@ -1,3 +1,8 @@
+
+########################****************************#######################
+    Buat koneksi dari psql ke apps go dengan orm sqlc
+########################****************************#######################
+
 1. Install sqlc di wsl2 setelah install postgresql di wsl2 juga
 2. Buat direktori baru seetelah itu : touch main.go -> go mod init // bisa nama github.com/ardileon/nama folder atau project.
 
